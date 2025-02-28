@@ -72,22 +72,22 @@
 1. (1 mark) The metrics of network performance include **TCP bandwidth** and **round-trip time (RTT)**. Within the same region, what network performance is experienced between instances of the same type and different types? In order to answer this question, you need to complete the following table.
 
     | Type                      | TCP b/w (Mbps) | RTT (ms) |
-    | ------------------------- | -------------- | -------- |
-    | `t3.medium` - `t3.medium` |                |          |
-    | `m5.large` - `m5.large`   |                |          |
-    | `c5n.large` - `c5n.large` |                |          |
-    | `t3.medium` - `c5n.large` |                |          |
-    | `m5.large` - `c5n.large`  |                |          |
-    | `m5.large` - `t3.medium`  |                |          |
+    | ------------------------- | :------------- | -------- |
+    | `t3.medium` - `t3.medium` | 4300           | 0.411    |
+    | `m5.large` - `m5.large`   | 4970           | 0.175    |
+    | `c5n.large` - `c5n.large` | 4960           | 0.145    |
+    | `t3.medium` - `c5n.large` | 4900           | 0.162    |
+    | `m5.large` - `c5n.large`  | 4870           | 0.144    |
+    | `m5.large` - `t3.medium`  | 4960           | 0.153    |
 
-    > Region: US East (N. Virginia). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI. Note: Use private IP address when using iPerf within the same region. You'll need iPerf for measuring TCP bandwidth and Ping for measuring Round-Trip time.
+    > Region: US East (N. Virginia). Use `Ubuntu Server 24.04 LTS (HVM)` as AMI. Note: Use private IP address when using iPerf within the same region. You'll need iPerf for measuring TCP bandwidth and Ping for measuring Round-Trip time.
 
 2. (1 mark) What about the network performance for instances deployed in different regions? In order to answer this question, you need to complete the following table.
 
     | Connection                | TCP b/w (Mbps) | RTT (ms) |
     | ------------------------- | -------------- | -------- |
-    | N. Virginia - Oregon      |                |          |
-    | N. Virginia - N. Virginia |                |          |
-    | Oregon - Oregon           |                |          |
+    | N. Virginia - Oregon      | 85.4           | 61.491   |
+    | N. Virginia - N. Virginia | 4920           | 0.142    |
+    | Oregon - Oregon           | 1020           | 0.894    |
 
-    > Region: US East (N. Virginia), US West (Oregon). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI. All instances are `c5.large`. Note: Use public IP address when using iPerf within the same region.
+    > Region: US East (N. Virginia), US West (Oregon). Use `Ubuntu Server 24.04 LTS (HVM)` as AMI. All instances are `c5.large`. Note: Use public IP address when using iPerf within the same region.
